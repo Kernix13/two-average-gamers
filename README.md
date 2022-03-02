@@ -97,3 +97,90 @@ Pages that are not linked to on the main site and the template files they are us
 
 Which Read page is/should be the main blog page. We need to get rid of one of them. Also for the duplicate about pages.
 
+## Script code in head section
+
+Here is a comment and there is no code above it:
+
+```html
+<!-- End Google Analytics opt-out snippet added by Site Kit -->
+```
+
+But lower down is this:
+
+```html
+<!-- Google Analytics snippet added by Site Kit -->
+<script src='https://www.googletagmanager.com/gtag/js?id=UA-117911972-1' id='google_gtagjs-js' async></script>
+<script id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["twoaveragegamers.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-117911972-1", {"anonymize_ip":true});
+</script>
+
+<!-- End Google Analytics snippet added by Site Kit -->
+```
+
+And even more Site Kit code:
+
+```html
+<!-- Google AdSense snippet added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense snippet added by Site Kit -->
+
+<!-- Google AdSense snippet added by Site Kit -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2995836029247816" crossorigin="anonymous"></script>
+
+<!-- End Google AdSense snippet added by Site Kit -->
+```
+
+Here is Analytics:
+
+```html
+<script id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('set', 'linker', {"domains":["twoaveragegamers.com"]} );
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "UA-117911972-1", {"anonymize_ip":true});
+</script>
+```
+
+Here is google tag manager script:
+
+```html
+<script src="//www.googletagmanager.com/gtag/js?id=UA-117911972-1"  data-cfasync="false" data-wpfc-render="false" async></script>
+```
+
+Here is something else for Google:
+
+```html
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2995836029247816" crossorigin="anonymous"></script></head>
+```
+
+And here is the code I added to functions.php to property load Analytics though I changed the link to your link and the UA code for yours:
+
+```php
+// inline google analytics script via wp_print_scripts
+function tower_google_print_scripts() { 
+	
+	?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117911972-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117911972-1');
+</script>
+	
+	<?php
+	
+}
+add_action('wp_print_scripts', 'tower_google_print_scripts');
+```
+
+
+I 
