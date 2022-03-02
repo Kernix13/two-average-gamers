@@ -79,13 +79,10 @@ A list of template files that are missing from the parent theme:
 
 ## Blog ideas
 
-GitHub repos that deal with major game brands:
-- something...
-- something...
-- something...
-- something...
+GitHub repos that deal with major game brands or other game applications for new and unique article ideas:
+- Haven't searched yet...
 
-Search issues and discussions tabs for article ideas.
+> Search issues and discussions tabs for article ideas.
 
 
 ## Header
