@@ -77,6 +77,26 @@ A list of template files that are missing from the parent theme:
 - No template?
 
 
+## Blog ideas
+
+GitHub repos that deal with major game brands:
+- something...
+- something...
+- something...
+- something...
+
+Search issues and discussions tabs for article ideas.
 
 
+## Header
+
+Copy: https://www.dreamhustlecode.com/
+
+Pages that are not linked to on the main site and the template files they are using:
+- https://twoaveragegamers.com/about-two-average-gamers/ - page.php
+- https://twoaveragegamers.com/about/ - page.php
+- https://twoaveragegamers.com/read-new/ - page.php
+- https://twoaveragegamers.com/read/ - page.php
+
+Which Read page is/should be the main blog page. We need to get rid of one of them. Also for the duplicate about pages.
 

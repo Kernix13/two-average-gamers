@@ -10,6 +10,9 @@ Text Domain: astra-child
 Template: astra
 */
 
-body {
-  color: red;
+
+.ast-author-box {
+  background-image: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(202,248,128) 50%,rgb(113,206,126) 100%);
 }
+
+
