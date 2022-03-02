@@ -23,3 +23,5 @@ function child_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+// inline google analytics script via wp_print_scripts, need text domain for astra-child, UA code and correct Google Analytics link
